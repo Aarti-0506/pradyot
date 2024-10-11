@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -24,11 +25,12 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    
 }
 
 .header {
     position: fixed;
-    top: 0;
+    top: 5;
     left: 0;
     width: 100%;
     padding: 6	rem 12%;
@@ -41,6 +43,8 @@ body {
 }
 
 .logo {
+    margin-right: 50;
+    margin: 50;
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
@@ -55,11 +59,33 @@ body {
 .logo span {
     text-shadow: 0 0 25px var(--main-color);
 }
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensures logo and other items are spaced */
+    align-items: center; /* Vertically aligns items */
+    padding: 0 2rem; /* Adds some padding inside the navbar */
+    background-color: #0b0b0b;
+}
+
+.navbar-logo {
+    margin: 5rem;
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #fff; /* Adjust text color */
+    white-space: nowrap; /* Prevents the logo from breaking into a new line */
+    overflow: hidden; /* Prevents content from overflowing */
+    text-overflow: ellipsis; /* Adds ellipsis (...) when text overflows */
+}
+
+.navbar-items {
+    display: flex;
+    gap: 1rem; /* Spacing between navigation items */
+}
+
 
 .navbar a {
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-left: 7rem;
+    margin-left: 5rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 6px solid transparent;
@@ -87,6 +113,8 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
 }
 
 .home-content {
@@ -96,7 +124,7 @@ section {
     align-items: flex-start;
     text-align: left;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 0;
 }
 
 span {
@@ -117,6 +145,7 @@ span {
 }
 
 .home-img {
+    margin-top: 0rem;
     flex: 1;
     border-radius: 50%;
 }
@@ -134,7 +163,7 @@ span {
 }
 
 .home-content p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.8;
     max-width: 1000px;
@@ -180,6 +209,86 @@ span {
 .btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 50px var(--main-color);
+}
+/* General Background - Vast Space (Black and Gray) */
+body {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a); /* Black to dark gray gradient */
+    color: #ffffff; /* Text color in white */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cosmic Section with Dark Blues and Purples */
+.section-space {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); /* Deep blue and purple gradient */
+    padding: 100px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Neon Glowing Accents */
+h1, h2, h3 {
+    color: #00ffff; /* Neon cyan for headings */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
+    font-family: 'Orbitron', sans-serif;
+}
+
+p {
+    color: #f0f0f0;
+    font-size: 1.1em;
+}
+
+/* Neon Glowing Buttons */
+.button-neon {
+    background-color: rgba(0, 255, 102, 0.1); /* Neon green with transparency */
+    border: 2px solid #00ff66; /* Neon green border */
+    color: #00ff66;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.5), 0 0 30px rgba(0, 255, 102, 0.3);
+}
+
+.button-neon:hover {
+    background-color: rgba(0, 255, 102, 0.3); /* Slightly brighter green on hover */
+    box-shadow: 0 0 30px rgba(0, 255, 102, 1), 0 0 60px rgba(0, 255, 102, 0.5);
+}
+
+/* Footer with Black and Gray */
+footer {
+    background: #1a1a1a;
+    color: #999999;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Links with Neon Glow */
+a {
+    color: #ff00ff; /* Neon pink for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff99ff; /* Lighter pink on hover */
+    text-shadow: 0 0 8px rgba(255, 153, 255, 0.7), 0 0 12px rgba(255, 153, 255, 0.5);
+}
+
+/* Starry Background Animation (Optional) */
+.starry-sky {
+    background: url('path/to/stars.png') no-repeat center center fixed;
+    background-size: cover;
+    animation: starry 100s linear infinite;
+}
+
+@keyframes starry {
+    0% { background-position: 0 0; }
+    100% { background-position: 10000px 5000px; }
 }
 
 .btn-group {
@@ -264,7 +373,7 @@ span {
 .heading {
     font-size: 8rem;
     text-align: center;
-    margin: 5rem 0;
+    margin: 0rem 0;
 }
 
 .education {
@@ -336,7 +445,7 @@ span {
     padding-left: calc(50% + 30px);
     text-align: left;
 }
-/* Target the 16th October box specifically */
+
 .timeline-item:nth-child(1) .timeline-content {
     width: 90%; /* Decrease the horizontal length */
     height: auto; /* Increase the height based on content */
@@ -346,26 +455,22 @@ span {
     transition: all 0.3s ease-in-out;
 }
 
-/* Ensure that other timeline items are not affected */
 .timeline-item {
     margin-bottom: 20px;
 }
 
-/* Target the 17th October box specifically */
 .timeline-item:nth-child(2) .timeline-content {
-    width: 270%; /* Decrease the horizontal length */
-    height: auto; /* Increase the height based on content */
+    width: 270%; 
+    height: auto; 
     padding: 15px;
     margin: 10px 0;
-    border: 2px solid var(--main-color); /* Optional: Highlight the box */
+    border: 2px solid var(--main-color); 
     transition: all 0.3s ease-in-out;
 }
 
-/* Ensure that other timeline items are not affected */
 .timeline-item {
     margin-bottom: 20px;
 }
-
 
 .timeline-dot {
     height: 21px;
@@ -432,6 +537,7 @@ span {
     color: black;
 }
 .services h2{
+    margin-top: 5rem;
 	margin-bottom:5rem;
 	color:white;
 }
@@ -443,7 +549,7 @@ span {
 }
 .service-box{
 	background-color: var(--main-color);
-	height: 300px;
+	height: 250px;
 	border-radius:3rem;
 	border: 5px solid transparent;
 	cursor: pointer;
@@ -475,4 +581,368 @@ span {
     font-weight: 600;
     max-height: 100px;
     margin: auto;
+}
+.rules {
+    background: linear-gradient(135deg, rgba(25, 25, 112, 0.8), rgba(0, 0, 0, 0.8)), url('path/to/your/galaxy-background.jpg') no-repeat center center; /* Use a galaxy-themed background image */
+    background-size: cover;
+    border: 2px solid #FFD700; /* Gold border for a cosmic touch */
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    color: #FFD700; /* Gold text color */
+}
+
+.rules h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #fff; /* White for the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+}
+
+.rules ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.rules li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border between rules */
+}
+
+.rules li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.rules p {
+    text-align: center;
+    margin: 10px 0;
+}
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+@keyframes stars {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif; /* Space-themed font */
+}
+
+p {
+    font-family: 'Raleway', sans-serif; /* Supporting text font */
+}
+.button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #0ff;
+    color: #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('path/to/your/star-background.jpg') repeat;
+    animation: stars 5s linear infinite alternate;
+    z-index: -1; /* Keep it in the background */
+}
+/* Global styles for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Footer styling */
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #101025; /* Dark spacey background */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 20px 0; /* Adjusted padding to fit the new section */
+    font-size: 1.1rem;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.8);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section within the footer for space theme */
+
+
+.section-space p {
+    color: #ddd; /* Light gray for text */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.button-neon {
+    background-color: #00ff99; /* Neon green button */
+    color: #101025; /* Dark color for contrast */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-neon:hover {
+    background-color: #ff6fff; /* Neon pink on hover */
+}
+
+.footer-links a {
+    color: #00ff99;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: #ff6fff; /* Neon pink on hover */
+}
+
+/* Mobile responsive footer */
+@media (max-width: 600px) {
+    .footer {
+        font-size: 1rem;
+    }
+
+    .section-space h2 {
+        font-size: 1.4rem;
+    }
+
+    .button-neon {
+        font-size: 1.1rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Space theme background and text */
+.contact-section {
+    background-color: #1a1a40; /* Dark cosmic blue */
+    color: #fff; /* White text for contrast */
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Section title styles */
+.section-title {
+    font-size: 2.5rem;
+    color: #e0e0ff; /* Light purple to match space vibe */
+    text-shadow: 0px 0px 15px #a3a3ff; /* Neon glow effect */
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif; /* Space-inspired font */
+}
+
+/* Contact list styles */
+.contact-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.contact-list li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px #ffffff; /* Glow on hover */
+}
+
+/* Icon styles for cosmic vibe */
+.icon {
+    font-size: 1.5rem;
+    color: #ff6fff; /* Neon pink for a spacey look */
+    margin-right: 10px;
+}
+
+/* Faculty Coordinator heading */
+.contact-list h3 {
+    font-size: 1.8rem;
+    color: #ffec99; /* Light yellow for coordinator */
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 10px #f5c542;
+}
+
+/* Button Neon Effect */
+.button-neon {
+    background-color: transparent;
+    border: 2px solid #00ff99; /* Neon green border */
+    color: #00ff99;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-neon:hover {
+    background-color: #00ff99;
+    color: #1a1a40;
+    box-shadow: 0 0 20px #00ff99; /* Neon glow effect */
+}
+/* Star Container for the whole page */
+#star-container {
+    position: fixed; /* Use fixed to keep stars in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure it doesn't interfere with clicking */
+    z-index: 1; /* Keep it behind content but above background */
+}
+
+/* Star style */
+.star {
+    position: absolute;
+    background-color: #fff; /* White for stars */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+/* Optional: Animate stars to twinkle */
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.star {
+    animation: twinkle 2s infinite ease-in-out;
+    animation-delay: calc(0.1s * var(--i));
+}
+.section-title {
+    text-align: center; /* Center the section title */
+    font-size: 2em; /* Adjust the font size */
+    color: #fff; /* White color for contrast */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.contact-list {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle shadow */
+    color: #fff; /* Text color */
+}
+
+.contact-list ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.contact-list li {
+    font-size: 1.2em; /* Font size for list items */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.projects {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for consistency */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    color: #fff; /* Text color */
+    margin-top: 20px; /* Space between sections */
+}
+
+.projects ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+#star-container {
+    position: fixed; /* Fixed position to stay in the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Hide overflow */
+    z-index: 1; /* Behind other content */
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white; /* Star color */
+    border-radius: 50%; /* Circular stars */
+    opacity: 0.8; /* Semi-transparent stars */
+    animation: twinkle 1.5s infinite alternate; /* Twinkling effect */
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.prize-pool {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    padding: 20px; /* Padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px; /* Space between sections */
+    color: #fff; /* White text */
+    position: relative; /* Position for star effect */
+    z-index: 10; /* Above star background */
+}
+
+.prize-container {
+    display: grid; /* Grid layout for prizes */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+}
+
+.prize-item {
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside each prize item */
+    text-align: center; /* Center text */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background */
+    transition: transform 0.3s; /* Animation effect */
+}
+
+.prize-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.prize-item h3 {
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 1.5em; /* Font size for prize titles */
+}
+
+.prize-item p {
+    margin: 0; /* No margin for paragraph */
+    font-size: 1em; /* Font size for descriptions */
 }
