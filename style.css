@@ -546,6 +546,7 @@ a:hover {
     grid-template-columns: repeat(2,1fr);
     align-items:center;
     gap: 1.5rem;
+    font-size: 8px;
 }
 .service-box{
 	background-color: var(--main-color);
@@ -812,6 +813,104 @@ html {
     margin-top: 50px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+/* Base styles for desktop */
+body {
+    font-size: 16px; /* Default font size */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .section-title {
+        font-size: 2em; /* Adjust title size for mobile */
+    }
+
+    .contact h2 {
+        font-size: 2.5em; /* Adjust heading size for mobile */
+    }
+
+    .btn-group {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+    }
+
+    .registration-fees, .map-container {
+        width: 100%; /* Make the map and fees section full-width */
+        margin: 0 auto; /* Center the elements */
+        padding: 10px; /* Add some padding */
+    }
+    
+    /* Adjust the layout of your sections */
+    .contact-list {
+        padding: 10px; /* Add padding to the contact list */
+    }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8em; /* Further reduce size for small screens */
+    }
+
+    .contact-list {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+}
+.btn-group {
+    display: flex;
+    justify-content: space-around; /* Distribute buttons evenly */
+    flex-wrap: wrap; /* Allow buttons to wrap */
+}
+
+.registration-fees,
+.map-container {
+    width: 48%; /* Make them responsive */
+    display: inline-block; /* Allow side-by-side display */
+    vertical-align: top; /* Align items at the top */
+}
+img {
+    max-width: 100%; /* Ensure images scale down */
+    height: auto; /* Maintain aspect ratio */
+}
+.button-neon {
+    padding: 12px 20px; /* Increase padding for touch targets */
+    font-size: 1.2em; /* Adjust font size */
+}
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Background color */
+    color: white; /* Text color */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Smaller font size */
+    }
+    
+    .contact h2 {
+        font-size: 2.5em; /* Adjust heading size for mobile */
+    }
+
+    .btn-group {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .registration-fees, .map-container {
+        width: 100%; /* Full width for mobile */
+        margin: 0 auto; /* Center align */
+    }
+}
+
+/* Responsive images */
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Section title styles */
